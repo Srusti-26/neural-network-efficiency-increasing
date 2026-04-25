@@ -329,7 +329,7 @@ This improves real-world deployment readiness and creates strong research value 
 * Sumangala Vastrad 1NT24AD404
 * Vinay V 1NT24AD405
 
-### Under the guidance of :
+*Under the guidance of :*
 Archana Mathur
 Professor
 
