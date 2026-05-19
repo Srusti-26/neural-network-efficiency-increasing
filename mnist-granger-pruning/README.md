@@ -1,4 +1,4 @@
-# Improving Neural Network Efficiency using Granger Causality and Neuron Pruning
+# Improving Neural Network Efficiency using Neuron Pruning
 
 This project shows how a trained neural network can be made smaller and faster without losing much accuracy.
 
