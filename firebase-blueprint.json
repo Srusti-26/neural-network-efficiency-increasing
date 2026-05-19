@@ -1,0 +1,127 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique identifier for the user" },
+        "email": { "type": "string", "description": "Email address" },
+        "displayName": { "type": "string", "description": "User's full name" },
+        "role": { "type": "string", "enum": ["student", "faculty", "admin", "librarian"], "description": "User role" },
+        "department": { "type": "string", "description": "Academic department" },
+        "photoURL": { "type": "string", "description": "Profile picture URL" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "AcademicResource": {
+      "title": "Academic Resource",
+      "description": "Notes, PYQs, and other study materials",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["notes", "pyq", "assignment"] },
+        "semester": { "type": "integer" },
+        "subject": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "uploadedBy": { "type": "string", "description": "Faculty UID" },
+        "uploadedByName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "type", "semester", "subject", "fileUrl", "uploadedBy"]
+    },
+    "LibraryBook": {
+      "title": "Library Book",
+      "description": "E-books and journals in the digital library",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["available", "borrowed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "author", "category"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "Campus events and workshops",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "location": { "type": "string" },
+        "organizer": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "registrations": { "type": "integer", "description": "Count of registered students" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "date", "organizer"]
+    },
+    "Attendance": {
+      "title": "Attendance",
+      "description": "Daily attendance records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "studentName": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "status": { "type": "string", "enum": ["present", "absent"] },
+        "method": { "type": "string", "description": "e.g., face-scan, manual" },
+        "subject": { "type": "string" }
+      },
+      "required": ["studentId", "date", "status", "subject"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "System alerts and announcements",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string", "description": "Recipient UID (null for all)" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string", "enum": ["info", "warning", "success", "error"] },
+        "read": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "message", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Users collection"
+    },
+    "/resources/{resourceId}": {
+      "schema": "AcademicResource",
+      "description": "Study materials"
+    },
+    "/books/{bookId}": {
+      "schema": "LibraryBook",
+      "description": "Digital library books"
+    },
+    "/events/{eventId}": {
+      "schema": "Event",
+      "description": "Campus events"
+    },
+    "/attendance/{attendanceId}": {
+      "schema": "Attendance",
+      "description": "Attendance records"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Global and user-specific notifications"
+    }
+  }
+}
