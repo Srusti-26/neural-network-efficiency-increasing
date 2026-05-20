@@ -324,16 +324,16 @@ This improves real-world deployment readiness and creates strong research value 
 
 ## Authors
 
-Srusti 1NT23AD052
-Sri Nidhi Shinde 1NT23AD050
-Sumangala Vastrad 1NT24AD404
-Vinay V 1NT23AD052
+-Srusti 1NT23AD052
+-Sri Nidhi Shinde 1NT23AD050
+-Sumangala Vastrad 1NT24AD404
+-Vinay V 1NT23AD052
 
 ### Under the guidance of :
-Archana Mathur
-Professor
+-Archana Mathur
+-Professor
 
-Department of Artificial Intelligence and Data Science
+-Department of Artificial Intelligence and Data Science
 
 ---
 
