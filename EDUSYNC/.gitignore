@@ -1,0 +1,12 @@
+# ignore build and dependencies
+node_modules/
+.vite/
+dist/
+build/
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.*.local
