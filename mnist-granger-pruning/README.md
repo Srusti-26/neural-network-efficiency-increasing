@@ -104,16 +104,12 @@ In this project, each neuron's activation pattern is treated like a small time s
 
 If the answer is yes, that neuron may be part of an important information flow inside the model. If the answer is no, it may be less important.
 
-Only statistically meaningful links are kept using:
+
+
+This  causality matrix is saved in:
 
 ```text
-p-value < 0.05
-```
-
-This filtered causality matrix is saved in:
-
-```text
-results/granger_matrix_filtered.csv
+results/granger_matrix.csv
 ```
 
 ### 5. Score Neuron Importance
