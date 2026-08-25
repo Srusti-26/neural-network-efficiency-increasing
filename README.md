@@ -353,3 +353,17 @@ and random baselines across three seeds.
 
 See the module's [README](car_eval_causal_pruning_project/README.md) for setup,
 figures, results, limitations, and reproducibility details.
+
+## Sonar Dataset Extension
+
+The Sonar experiment is available in
+[`sonar_causal_pruning_project/`](sonar_causal_pruning_project/). It
+applies the pruning pipeline to the Sonar (Connectionist Bench: Mines vs.
+Rocks) dataset with stationarity-aware, neuron-to-output Granger causality
+and matched magnitude and random baselines across three seeds.
+
+- **Dataset:** 208 samples, 60 continuous features, 2 output classes (binary)
+- **Run:** `cd sonar_causal_pruning_project && python run_experiment.py`
+
+See the module's [README](sonar_causal_pruning_project/README.md) for setup,
+figures, results, limitations, and reproducibility details.
