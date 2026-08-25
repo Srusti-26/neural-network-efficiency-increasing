@@ -1,6 +1,6 @@
 # Iris Causal Pruning
 
-This folder contains the Iris dataset experiment uploaded by Nidhi for the
+This folder contains the Iris dataset experiment 
 Neural Network Efficiency project. The experiment investigates whether hidden
 neurons can be pruned using activation behaviour and Granger-causality-based
 importance while retaining model performance.
@@ -55,8 +55,4 @@ See the [main project README](../README.md) for the overall research goals and
 the other dataset modules. The Car Evaluation documentation is available in
 [`car_eval_causal_pruning_project/README.md`](../car_eval_causal_pruning_project/README.md).
 
-## Provenance
-
-The notebook and result files were uploaded by Nidhi and have been moved from
-the repository root into this project folder so that the experiment and its
-outputs remain together.
+.
