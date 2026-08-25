@@ -1,0 +1,17 @@
+# Generated experiment artifacts
+results/models/
+*.pt
+*.pth
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local notebook/runtime metadata
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
