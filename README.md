@@ -337,3 +337,19 @@ This improves real-world deployment readiness and creates strong research value 
 
 ---
 
+
+---
+
+## Car Evaluation Dataset Extension
+
+The Car Evaluation experiment is available in
+[`car_eval_causal_pruning_project/`](car_eval_causal_pruning_project/). It
+applies the pruning pipeline to the OpenML Car Evaluation dataset with
+stationarity-aware, neuron-to-output Granger causality and matched magnitude
+and random baselines across three seeds.
+
+- **Dataset:** 1,728 samples, 6 categorical features, 4 output classes
+- **Run:** `cd car_eval_causal_pruning_project && python run_experiment.py`
+
+See the module's [README](car_eval_causal_pruning_project/README.md) for setup,
+figures, results, limitations, and reproducibility details.
