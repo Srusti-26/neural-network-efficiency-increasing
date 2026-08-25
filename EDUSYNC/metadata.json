@@ -1,6 +1,0 @@
-{
-  "name": "EduSync",
-  "description": "Smart Campus Management System with Neural Network Optimization Research integration. Features include student/faculty dashboards, AI-based face attendance, resource sharing, and e-library.",
-  "requestFramePermissions": ["camera"],
-  "majorCapabilities": []
-}
